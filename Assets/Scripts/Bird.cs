@@ -36,6 +36,7 @@ public class Bird : MonoBehaviour
     {
         if (!this.birdDead)
         {
+            this.birdRigidbody.velocity = Vector2.zero;
             this.birdDead = true;
             this.birdAnimator.SetTrigger("Die");
             GameControl.Instance.BirdDied();
